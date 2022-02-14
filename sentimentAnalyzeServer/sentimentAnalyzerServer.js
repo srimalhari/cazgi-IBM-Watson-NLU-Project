@@ -63,7 +63,6 @@ app.get("/url/emotion", (req,res) => {
         return res.send("Could not do desired operation "+err);
     });
 });
-
 //The endpoint for the webserver ending with /url/sentiment
 app.get("/url/sentiment", (req,res) => {
     let urlToAnalyze = req.query.url
