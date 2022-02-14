@@ -1,4 +1,5 @@
 const express = require('express');
+const dotenv = require('dotenv')
 const app = new express();
 
 /*This tells the server to use the client 
@@ -13,10 +14,10 @@ app.use(cors_app());
 variables that you set up in the .env file*/
 
 // const dotenv = require('dotenv');
-// dotenv.config();
+dotenv.config();
 
-// const api_key = process.env.API_KEY;
-// const api_url = process.env.API_URL;
+const api_key = process.env.API_KEY;
+const api_url = process.env.API_URL;
 
 function getNLUInstance() {
     const NaturalLanguageUnderstandingV1 = require('ibm-watson/natural-language-understanding/v1');
